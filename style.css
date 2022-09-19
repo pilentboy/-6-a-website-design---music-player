@@ -1,0 +1,526 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: black;
+    box-sizing: border-box;
+    direction: ltr;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul li{
+    list-style: none;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+   background-color: rgba(166, 190, 194, 0.591);
+}
+
+
+/* FLEX CLASSES */
+/* FLEX ROW */
+.FRCenterCenter{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.FRStartCenter{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.FRBetweenCenter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.FREvenlyCenter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.FRAroundCenter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+
+/* FLEX COLUMN */
+.FCBetweenCenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.FCEvenlyCenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.FCCenterCenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.FCCenterStart{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.FCStartCenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+
+
+
+/* ROOT */
+:root{
+    --gray1:rgb(130, 125, 125);
+    --gray2:rgb(194, 188, 188);
+    --gray3:rgb(178, 178, 178);
+    --gray4:rgb(212, 211, 211);
+}
+
+/* ----------- CONTAINER -----------*/
+
+#container{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.box{
+    background-color: azure;
+    border: 1px solid #fff;
+    /* width: 60%;
+    height: 90%; */
+    width: 300px;
+    height: 560px;
+    border-radius: 5px;
+    box-shadow: -1px 4px 17px -4px rgba(0,0,0,0.85)
+    ;
+}
+
+
+/*  ---------- FILES LIST ---------- */
+
+#filesList{
+    display:flex;
+    position: relative;
+}
+
+
+#search{
+    width: 90%;
+    height: 30px;
+    margin-top: 10px;
+    border-bottom: 1px solid var(--gray2);
+}
+#search #searchInput{
+    border: none;
+    outline: none;
+    width:90%;
+    height: 15px;
+    background-color: transparent;
+}
+
+input::-webkit-input-placeholder{
+    text-align: left;
+    font-size: 0.8rem;
+}
+
+
+#search i{
+    margin-right: 5px;
+    font-size: 0.8rem;
+    color: var(--gray3);
+}
+
+#searchBTN:hover{
+    cursor: pointer;
+}
+
+/*  ---------- PLAYING MUSIC  ----------*/
+
+#playingMusic{
+    width: 100%;
+    height: 90px;
+}
+
+#musicCover{
+    width: 90px;
+    height: 90px;
+}
+
+#musicCover #bigRoundDisc{
+    width: 90px;
+    height: 90px;
+    border:1px solid none;
+    border-radius: 100%;
+    background-image: url(./Image/cover.jpg);
+    background-size: cover;
+}
+
+#bigRoundDisc:hover{
+    cursor: pointer;
+}
+#musicCover  #bigRoundDisc  #smallRoundDisc{
+    width: 20px;
+    height: 20px;
+    border:1px solid none;
+    border-radius: 100%;
+    background-color: white;
+}
+
+#playingMusicStaus{
+    height: 100%;
+    width: 40%;
+}
+
+#playingMusicTitle{
+    margin-top: 5px;
+}
+
+#MusicName{
+
+}
+
+#singerName{
+    color: var(--gray3);
+    font-size: 12px;
+}
+
+.playingMusicControls{
+    width: 85%;
+    height: 30px;
+}
+
+.playingMusicControls .backward{
+
+}
+
+.playingMusicControls .play{
+    font-size: 1.2rem;
+   
+}
+
+
+.playingMusicControls .forward{
+    
+}
+
+.playingMusicControls .forward,.backward{
+    color: var(--gray3);
+    font-size: 1.2rem;
+}
+
+
+
+.playingMusicControls .play{
+    color: black;
+    font-size: 1.2rem;
+}
+
+.playingMusicControls .forward,.play,.backward:hover{
+    cursor: pointer;
+}
+
+.backward:active{
+    color: orange;
+}
+.forward:active{
+    color: orange;
+}
+.play:active{
+    color: green;
+}
+
+/*----------  MUSIC LIST  ----------*/
+#musicList{
+    min-height: 320px;
+    width: 100%;
+    overflow: auto;
+    background-image: linear-gradient(rgba(93, 84, 84, 0.07), white);
+}
+
+::-webkit-scrollbar{
+    display:none
+  }
+
+#musicList h4{
+    width: 90%;
+    text-align: left;
+    margin-bottom: 10px;
+}
+.hidden{
+    visibility: hidden;
+}
+
+
+#musicList .item{
+    width: 90%;
+    height: 55px;   
+    position: relative;
+}
+
+#musicList .item .item1{
+    width: 100%;
+    height: 55px;  
+}
+
+#musicList .item .item2{
+    width: 87%;
+    height: 1px; 
+    background-color: var(--gray4); 
+    position:absolute;
+    top: 100%;
+    right: -13px;
+}
+
+
+
+
+
+.musicInfo{
+    width: 120px; 
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.musicInfo .musicCover{
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    background-image: url(./Image/cover.jpg);
+    background-size: cover;
+}
+
+.musicInfo .musicCover .smallDisc{
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    background-color: white;
+
+}
+
+.musicInfo .musicName{
+    font-size: 0.8rem;
+}
+
+.MusicTitle{
+    font-weight: bold;
+    font-size: 0.9rem;
+
+}   
+
+.SingerName{
+    color: var(--gray3);
+}
+
+
+.itemRightSide{
+    width: 20%;
+    height: 50%;   
+}
+.options{
+   color: var(--gray1);
+}
+
+.options:hover{
+    cursor: pointer;
+}
+
+
+.equalizer{
+    color: rgb(244, 0, 81);
+    font-size: 1.3rem;
+}
+
+
+/*-------- Played Screen LIST -------- */
+#playedScreen{
+   display: none;
+}
+
+#playedScreen #topOptions{
+    width: 100%;
+    height: 5%;
+}
+
+
+#playedScreen #topOptions #optionBTN,#backToFilesList:hover{
+    cursor: pointer;
+
+}
+
+#playedScreen #topOptions #titile,#backToFilesList,#optionBTN{
+    font-size: 1.1rem;
+    font-weight: bold;
+    
+}
+
+#playedScreen #topOptions #backToFilesList{
+    
+}
+
+#playedScreen #topOptions #titile{
+
+}
+
+#playedScreen #topOptions #optionBTN{
+
+}
+
+
+
+#musicPlaying{
+    width: 100%;
+    height: 440px;
+}
+
+
+/* --------musicCover2-------*/
+#musicCover2{
+    width: 80%;
+    height: 180px;
+}
+
+#musicCover2 #bigRoundDisc2{
+    width: 80%;
+    height: 100%;
+    border-radius: 100%;
+    background-image: url(./Image/cover.jpg);
+    background-size: cover;
+
+}
+
+#musicCover2 #bigRoundDisc2 #smallRoundDisc2{
+    width: 20%;
+    height: 20%;
+    border-radius: 100%;
+    background-color: white;
+}
+
+
+/* --------music information -- TITLE-------*/
+#playingMusicStaus2{
+    width: 100%;
+    height: 35px;
+}
+#playingMusicStaus2 #Title2{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#playingMusicStaus2 #singer2{
+    font-size:0.8rem ;
+    color: var(--gray3);
+}
+/* --------musicTime ----------*/
+#musicTime{
+    width: 100%;
+    height: 15px;
+}
+
+#musicTime #timeLine{
+   width: 150px;
+   height:3px;
+   background-color: var(--gray3);
+   border-radius: 5px;
+}
+
+#timeLine:hover{
+    cursor: pointer;
+}
+
+#musicTime #timeLine #spentTime{
+   width: 35%;
+   height: 100%;
+   background-color: rgb(244, 0, 81);
+   position: relative;
+  
+}
+
+#spentTime #circle{
+    border-radius: 100%;
+    width: 5px;
+    height: 5px;
+    background-color: rgb(244, 0, 81);
+    position: absolute;
+    right: -2%;
+    top: -40%;
+}
+#cureentTime,#fullTime{
+    color: var(--gray1);
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+
+
+.lastBorder{
+    width: 100px;
+    height: 4px;
+    background-color: var(--gray4);
+    border-radius: 50px;
+}
+
+
+/* playing sound icon*/
+
+
+#soundIcon{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    font-size: 3rem;
+    top: 50%;
+    right: -15%;
+    display: none;
+	cursor:pointer;
+}
+
+#soundIcon i{
+    color: gray;
+}
+
